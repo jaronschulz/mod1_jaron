@@ -1,0 +1,24 @@
+body{
+	font-family: sans-serif;
+}
+
+nav div {
+	flex: 1;
+}
+
+h1 {
+	font-size: 50px;
+
+}
+
+h2 {
+	font-size: 25px;
+}
+
+img {
+	width: 150px;
+}
+
+#logo {
+	size: 60px ;
+}
