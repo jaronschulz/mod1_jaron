@@ -59,11 +59,18 @@ img{
 	size: 60px ;
 }
 
-.lower-part{
+div .body{
+	flex: 2;
+	width: 30% 70%;
+	position: center;
+}
+
+.body{
 	align-items: bottom;
 	display: flex;
 	display: inline-block;
 	padding: 10px;
+
 }
 
 #pagelink{
