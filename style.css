@@ -2,16 +2,21 @@ body{
 	font-family: sans-serif;
 }
 
-/*#main-header{
-	align-items: bottom;
-}*/
+header{
+	padding-top: 50px;
+}
 
 ul{
 	list-style-type: none;
 }
 
+figure{
+	margin: 15px 50px 0 50px;
+}
+
 img{
-	width: 100%;
+	width: 80%;
+	border-radius: 20px;
 }
 
 h1{
@@ -22,6 +27,19 @@ h1{
 h2{
 	font-size: 21px;
 	font-family: sans-serif;
+}
+
+nav ul{
+	padding: 0;
+}
+
+nav li{
+	padding: 0 20px 0 0 ;
+}
+
+nav li:not(:first-child){
+	border-left: 2px solid black;
+	padding-left: 20px;
 }
 
 a{
@@ -53,13 +71,11 @@ a:hover, a:visited {
 
 .logo{
 	width: 100%;
-
+	padding-left: 50px;
+	padding-right: 50px;
 }
 
 .image-container{
 	width: 250px;
 }
 
-/*.flex-item{
-	flex: 1;
-}*/
