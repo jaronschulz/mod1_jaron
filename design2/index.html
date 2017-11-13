@@ -2,53 +2,60 @@
 <html>
 
 <head>
+    <meta charset="utf-8">
     <title>Northside Youth Soccer League</title>
     <link rel="stylesheet" type="text/css" href="styles/style.css">
+</head>
 
 <body>
-    <header id="main-header" class="flex-container">
-        <a href="index.html" class="image-container logo">
-			<img src="img/nysl_logo.png" alt="NYSL Logo">
-		</a>
-        <div>
-            <h1> Northside Youth Soccer League </h1>
-            <nav class="flex-item">
-                <ul class="flex-container">
-                    <li class="flex-item">
-                        <a href="index.html" class="nav-links">Home</a>
-                    </li>
-                    <li class="flex-item">
-                        <a href="about.html" class="nav-links">About NYSL</a>
-                    </li>
-                    <li class="flex-item">
-                        <a href="contact.html" class="nav-links">Contact </a>
-                    </li>
-                </ul>
-            </nav>
+    <div id="page-wrapper">
+         <h1 class="font-effect-outline"> Northside Youth Soccer League </h1>
+        <header class="flex-container">
+            <div id="bg-image">
+            </div>
+            <div id="titel-line">
+                <h2 id="black-box">Upcoming Events</h2>
+            </div>
+        </header>
+        <div id="content">
+            <aside>
+                <a href="index.html" id="logo-container">
+                    <img id="logo" src="img/nysl_logo.png" alt="NYSL Logo">
+                </a>
+                <nav>
+                    <ul class="flex-container">
+                        <li>
+                            <a href="index.html" class="nav-links active">Home</a>
+                        </li>
+                        <li>
+                            <a href="about.html" class="nav-links">About</a>
+                        </li>
+                        <li>
+                            <a href="contact.html" class="nav-links">Contact </a>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+            <main>
+                <article>
+                    <header id="season-plan">Upcoming Events</header>
+                    <ul>
+                        <li class="the-first">
+                            <h3>August 4</h3>
+                            <p>NYSL Fundraiser</p>
+                        </li>
+                        <li>
+                            <h3>August 16</h3>
+                            <p>Season Kick-off: Meet the Teams</p>
+                        </li>
+                        <li>
+                            <h3>September 1</h3>
+                            <p>1st game of the Season (Check <a href="">Game Schedule</a> for detailes)</p>
+                        </li>
+                    </ul>
+                </article>
+            </main>
         </div>
-    </header>
-    <div id="content" class="flex-container">
-        <aside>
-            <figure class="image-container">
-                <img src="img/soccer_image1.jpeg" alt="Kid kicking ball">
-            </figure>
-        </aside>
-        <main id="seasonplan">
-            <article>
-                <h2>Upcoming Events</h2>
-                <ul>
-                    <li>August 4
-                        <p>NYSL Fundraiser</p>
-                    </li>
-                    <li>August 16
-                        <p>Season Kick-off: Meet the Teams</p>
-                    </li>
-                    <li>September 1
-                        <p>1st game of the Season (Check <a href="">Game Schedule</a> for detailes)</p>
-                    </li>
-                </ul>
-            </article>
-        </main>
     </div>
 </body>
 
