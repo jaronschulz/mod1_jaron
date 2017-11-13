@@ -222,6 +222,12 @@ h3:not(.the-first) {
     font-weight: bold;
     text-decoration: none;
     color: green;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.nav-links:hover {
+    color: lightgreen;
 }
 
 #logo-container {
@@ -246,7 +252,7 @@ ul {
 
 li {
     margin: 10px 0;
-    min-width: 100px;
+    min-width: 150px;
 }
 
 .nav-links {
@@ -255,7 +261,7 @@ li {
 }
 
 aside {
-    padding: 25px 150px 0 0;
+    padding: 25px 100px 0 0;
 }
 
 main {
