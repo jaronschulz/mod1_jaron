@@ -3,19 +3,87 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
     margin: 0;
     padding: 0;
     border: 0;
@@ -23,58 +91,126 @@ time, mark, audio, video {
     font: inherit;
     vertical-align: baseline;
 }
+
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
     display: block;
 }
+
 body {
     line-height: 1;
 }
-ol, ul {
+
+ol,
+ul {
     list-style: none;
 }
-blockquote, q {
+
+blockquote,
+q {
     quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
     content: '';
     content: none;
 }
+
 table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+
 
 /*-------- START OF MY CSS STYLING ---------*/
 
 body {
     font-family: 'Barlow Semi Condensed', sans-serif;
     font-weight: 100;
-    font-size: 20px;
-
+    font-size: 18px;
+    line-height: 120%;
 }
 
 header {
-    background-color: #333; 
+    background-color: #333;
     position: absolute;
     right: 0px;
-    left:0px;
+    left: 0px;
     height: 70px;
 }
 
 h2 {
-    font-weight: 900;
+    font-weight: 400;
     font-size: 28px;
     margin-bottom: 10px;
+    margin-left: -20px;
+}
+
+h3 {
+    font-weight: 400;
+    font-size: 22px;
+    margin-left: -20px;
+}
+
+h4 {
+    font-weight: 400;
+    display: inline-block;
+    margin-left: 10px;
 }
 
 p {
     font-weight: 100;
+    margin-bottom: 10px;
+    font-size: 20px;
 }
 
-#logo-container {
+ul {
+    list-style: square;
+}
+
+ul.sub-points {
+    padding-left: 25px;
+}
+
+ol {
+    list-style: decimal;
+}
+
+.alphabetic {
+    list-style: lower-alpha;
+    padding-left: 25px;
+}
+
+.sub-numbers {
+    padding-left: 50px;
+}
+
+#circle {
+    list-style: circle;
+    padding-left: 50px;
+}
+
+#fifa {
+    padding-bottom: 20px;
+    color: green;
+}
+
+#logo-container {
     height: 100%
 }
 
@@ -99,7 +235,6 @@ ul.nav-links {
 li.nav-links {
     float: left;
     padding: 0 20px;
-
 }
 
 li.nav-links a {
@@ -114,16 +249,31 @@ li.nav-links a:hover {
     background-color: #112;
 }
 
+table {
+    font-family: courier, sans-serif;
+    font-size: 12px;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td,
+th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+
+/*tr:nth-child(even) {
+    background-color: #dddddd;
+}*/
+
 .nav-links {
     font
 }
 
-.active a{
+.active a {
     background-color: green;
-}
-
-a.button {
-    
 }
 
 .button {
@@ -144,14 +294,14 @@ main {
 
 .flex-container {
     display: flex;
-} 
+}
 
 section {
     padding: 20px 0;
     max-width: 600px;
 }
 
-#contact-info p{
+#contact-info p {
     font-weight: 200;
     font-size: 22px;
 }
@@ -160,7 +310,7 @@ section {
     flex: 1;
     position: relative;
     left: 10px;
-    padding: 30px 140px 0 140px;
+    padding: 30px 70px 0 140px;
     overflow: scroll;
 }
 
@@ -168,92 +318,30 @@ section {
     flex: 1;
     background-size: cover;
     background-position: center center;
-}   
+    padding-left: 120px;
+}
 
 .side-image {
     width: 100%;
 }
 
 .wallpaper.home {
-        background-image: url("../img/ball.jpg");
-} 
+    background-image: url("../img/ball.jpg");
+}
 
 .wallpaper.about {
-        background-image: url("../img/ball.jpg");
-} 
+    background-image: url("../img/ball.jpg");
+}
 
 .wallpaper.contact {
-        background-image: url("../img/ball.jpg");
-} 
+    background-image: url("../img/ball.jpg");
+}
 
 .wallpaper.about {
-        background-image: url("../img/ball.jpg");
-} 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    background-image: url("../img/ball.jpg");
+}
+
+#game-location {
+    display: flex;
+    font-size: 12px;
+}
