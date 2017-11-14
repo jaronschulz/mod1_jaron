@@ -49,6 +49,13 @@ table {
 
 /*-------- START OF MY CSS STYLING ---------*/
 
+body {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: 100;
+    font-size: 20px;
+
+}
+
 header {
     background-color: #333; 
     position: absolute;
@@ -58,25 +65,20 @@ header {
 }
 
 h2 {
-    font-family: 'Barlow Semi Condensed', sans-serif;
     font-weight: 900;
     font-size: 28px;
+    margin-bottom: 10px;
 }
 
 p {
-    font-family: 'Barlow Semi Condensed', sans-serif;
     font-weight: 100;
-}
-
-section {
-    padding: 50px 50 px;
 }
 
 #logo-container {
     height: 100%
 }
 
-#logo{
+#logo {
     -webkit-filter: contrast(180%);
     filter: contrast(180%);
     height: 50px;
@@ -84,7 +86,7 @@ section {
     padding-top: 10px;
 }
 
-ul {
+ul.nav-links {
     list-style-type: none;
     margin: -7px;
     padding: 0;
@@ -94,13 +96,13 @@ ul {
     left: 120px;
 }
 
-li {
+li.nav-links {
     float: left;
     padding: 0 20px;
 
 }
 
-li a {
+li.nav-links a {
     display: block;
     color: white;
     text-align: center;
@@ -108,8 +110,28 @@ li a {
     text-decoration: none;
 }
 
-li a:hover {
+li.nav-links a:hover {
     background-color: #112;
+}
+
+.nav-links {
+    font
+}
+
+.active a{
+    background-color: green;
+}
+
+a.button {
+    
+}
+
+.button {
+    position: fixed;
+    right: 20px;
+    top: 11px;
+    border-radius: 10px;
+    border: 1px solid #A4FF4A;
 }
 
 main {
@@ -124,31 +146,51 @@ main {
     display: flex;
 } 
 
+section {
+    padding: 20px 0;
+    max-width: 600px;
+}
+
+#contact-info p{
+    font-weight: 200;
+    font-size: 22px;
+}
+
 .content {
     flex: 1;
     position: relative;
     left: 10px;
-    padding: 50px;
-}
-
-section {
-    padding: 50px 0;
-    max-width: 600px;
+    padding: 30px 140px 0 140px;
+    overflow: scroll;
 }
 
 .wallpaper {
-    flex: 1; 
+    flex: 1;
     background-size: cover;
     background-position: center center;
 }   
+
+.side-image {
+    width: 100%;
+}
+
+.wallpaper.home {
+        background-image: url("../img/ball.jpg");
+} 
 
 .wallpaper.about {
         background-image: url("../img/ball.jpg");
 } 
 
-.side-image {
-    width: 100%;
-}
+.wallpaper.contact {
+        background-image: url("../img/ball.jpg");
+} 
+
+.wallpaper.about {
+        background-image: url("../img/ball.jpg");
+} 
+
+
 
 
 
