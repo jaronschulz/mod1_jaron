@@ -222,7 +222,7 @@ ol {
     padding-top: 10px;
 }
 
-ul.nav-links {
+ul.nav-link {
     list-style-type: none;
     margin: -7px;
     padding: 0;
@@ -232,12 +232,12 @@ ul.nav-links {
     left: 120px;
 }
 
-li.nav-links {
+li.nav-link {
     float: left;
     padding: 0 20px;
 }
 
-li.nav-links a {
+li.nav-link a {
     display: block;
     color: white;
     text-align: center;
@@ -245,7 +245,7 @@ li.nav-links a {
     text-decoration: none;
 }
 
-li.nav-links a:hover {
+li.nav-link a:hover {
     background-color: #112;
 }
 
@@ -268,7 +268,7 @@ th {
     background-color: #dddddd;
 }*/
 
-.nav-links {
+.nav-link {
     font-weight: 400;
 }
 
