@@ -1,4 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
+-/* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -156,6 +156,11 @@ body {
 
 }
 
+/* this will be a potential long list. 
+better to add, then to exclude. 
+In this case a class for the header where you want to have the style is better.
+But nice to use the :not() ;)
+*/
 header:not(#season-plan) {
     margin: 10 0 0 0;
     flex-direction: column
@@ -165,7 +170,8 @@ header:not(#season-plan) {
     background-repeat: none;
     background-size: cover;
     background-image: url("../img/design1_image1.jpeg");
-    background-position: top -50px center;
+    /* position not working like this... */
+    background-position: top -50px center; 
     height: 250px;
 }
 
@@ -188,6 +194,7 @@ h2 {
     font-size: 25px;
 }
 
+/* denglish */
 div #titel-line {
     height: 41px;
 }
@@ -271,4 +278,4 @@ main {
 
 /*main#contact-info {
     padding-top: 25px;
-}*/
+}

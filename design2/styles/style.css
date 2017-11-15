@@ -160,7 +160,8 @@ body {
 }
 
 #bg-image {
-    background-repeat: none;
+    background-repeat: none; 
+    /*or no-repeat*/
     background-size: cover;
     background-image: url("../img/design1_image1.jpeg");
     background-position: top -50px center;
@@ -195,6 +196,7 @@ h2 {
     font-size: 25px;
 }
 
+/* good, also :first-child would work here*/
 h2:nth-child(1) {
     padding: 0 0 5px 0;
 }
