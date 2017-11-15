@@ -269,7 +269,7 @@ th {
 }*/
 
 .nav-links {
-    font
+    font-weight: 400;
 }
 
 .active a {
@@ -339,6 +339,10 @@ section {
 
 .wallpaper.about {
     background-image: url("../img/ball.jpg");
+}
+
+.date {
+    width: 50px;
 }
 
 #game-location {
