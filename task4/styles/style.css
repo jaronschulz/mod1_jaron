@@ -232,7 +232,6 @@ ol {
 }
 
 #fifa {
-    padding-bottom: 20px;
     color: green;
 }
 
@@ -257,6 +256,10 @@ ul.nav-links {
     position: absolute;
     top: 20px;
     left: 120px;
+}
+
+li {
+    padding: 10px 0;
 }
 
 li.nav-links {
@@ -290,12 +293,31 @@ a.active {
     background-color: #89d83a;
 }
 
-.button {
+a.active.reg {
+    border-radius: 5px;
+    background-color: #ce1a1a;
+}
+
+a.active.cont {
+    border-radius: 5px;
+    background-color: #4076ce;
+}
+
+
+.button.reg {
     position: fixed;
     right: 20px;
     top: 15px;
     border-radius: 5px;
-    border: 1px solid #A4FF4A;
+    border: 1px solid #f44242;
+}
+
+.button.cont {
+    position: fixed;
+    right: 140px;
+    top: 15px;
+    border-radius: 5px;
+    border: 1px solid #2377ff;
 }
 
 table {
@@ -385,4 +407,8 @@ section {
 
 .wallpaper.contact {
     background-image: url("../img/contact.jpg");
+}
+
+.wallpaper.register {
+    background-image: url("../img/register.jpg");
 }

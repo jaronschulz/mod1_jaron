@@ -290,9 +290,17 @@ a.active {
     background-color: #89d83a;
 }
 
-.button {
+.button.reg {
     position: fixed;
     right: 20px;
+    top: 15px;
+    border-radius: 5px;
+    border: 1px solid #f44242;
+}
+
+.button.cont {
+    position: fixed;
+    right: 110px;
     top: 15px;
     border-radius: 5px;
     border: 1px solid #A4FF4A;
