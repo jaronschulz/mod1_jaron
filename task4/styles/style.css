@@ -170,7 +170,14 @@ h2 {
     margin-left: -20px;
 }
 
+h2.form {
+    font-weight: 400;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
 h3 {
+    font-family: 'Barlow Semi Condensed', sans-serif;
     font-weight: 400;
     font-size: 22px;
     margin-left: -20px;
@@ -338,6 +345,29 @@ th.month {
     width: 80px; 
 }
 
+fieldset {
+    font-family: courier, sans-serif;
+    font-size: 12px;
+}
+
+label:not(:first-child) {
+    padding: 15px;
+}
+
+input {
+    font-family: courier, sans-serif;
+    font-size: 12px;
+}
+
+input.long-box {
+    width: calc(100% - 131px);
+}
+
+.form {
+    font-weight: 400;
+    display: inline-block;
+}
+
 main {
     position: absolute;
     top: 70px;
@@ -386,7 +416,6 @@ section {
     background-size: cover;
     background-position: center center;
     padding: 0 60px 0 100px;
-
 }
 
 .wallpaper.home {
