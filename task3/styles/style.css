@@ -232,7 +232,6 @@ ol {
 }
 
 #fifa {
-    padding-bottom: 20px;
     color: green;
 }
 
@@ -244,7 +243,7 @@ ol {
     -webkit-filter: contrast(180%);
     filter: contrast(180%);
     height: 50px;
-    padding-left: 10px;
+    padding-left: 20px;
     padding-top: 10px;
 }
 
@@ -283,6 +282,11 @@ li.nav-links a:hover {
 .nav-links {
     font-weight: 400;
     padding: 0 10px;
+}
+
+li {
+    line-height: 18px;
+    padding: 10px 0;
 }
 
 a.active {
