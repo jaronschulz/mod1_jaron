@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:100,200,400,900');
 
 
+
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -96,6 +98,8 @@ video {
 }
 
 
+
+
 /* HTML5 display-role reset for older browsers */
 
 article,
@@ -140,9 +144,9 @@ table {
 }
 
 
+
+
 /*-------- START OF MY CSS STYLING ---------*/
-
-
 
 body {
     font-family: 'Barlow Semi Condensed', sans-serif;
@@ -159,15 +163,16 @@ header {
     height: 70px;
 }
 
-div:not(.wallpaper) {
-    margin: 10px;
+header.shadow, header a:not(#logo-container) {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    z-index: 100;
 }
+
 
 h2 {
     font-weight: 400;
     font-size: 28px;
     margin-bottom: 10px;
-    margin-left: -20px;
 }
 
 h2.form {
@@ -176,11 +181,29 @@ h2.form {
     margin-bottom: 10px;
 }
 
+.rul h2 {
+    margin-left: -20px;
+}
+
+.reg h2 {
+    margin: 0;
+    padding-bottom: 25px;
+}
+
+.reg h3 {
+    margin: 0;
+    padding-bottom: 25px;
+}
+
 h3 {
-    font-family: /*'Barlow Semi Condensed'*/Montserrat, sans-serif;
+    font-family: Montserrat, sans-serif;
     font-weight: 400;
     font-size: 22px;
     margin-left: -20px;
+}
+
+h3.home {
+    background: #333;
 }
 
 h4 {
@@ -194,7 +217,7 @@ h4.no-gap {
 }
 
 .last {
-    margin-bottom: 30px; 
+    margin-bottom: 30px;
 }
 
 h5 {
@@ -254,8 +277,9 @@ ol {
 }
 
 #logo {
-    -webkit-filter: contrast(180%);
-    filter: contrast(180%);
+    -webkit-filter: contrast(180%) drop-shadow(5px 5px 5px #222);
+    filter: contrast(180%)  drop-shadow(5px 5px 5px #222);
+    z-index: 100;
     width: 110px;
 }
 
@@ -286,13 +310,18 @@ li.nav-links a {
     text-align: center;
     width: 70px;
     padding: 10px 14px;
+    border-radius: 5px;
+    background-color: #282828;
     text-decoration: none;
 }
+
 li.nav-links a:hover {
     width: 70px;
     padding: 10px 14px;
     border-radius: 5px;
-    background-color: #112;
+    background-color: #515151;
+    transform: scale(1.02);
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
 .nav-links {
@@ -300,9 +329,17 @@ li.nav-links a:hover {
     padding: 0 10px;
 }
 
-a.active {
+.nav-links .active{
     border-radius: 5px;
     background-color: #89d83a;
+}
+
+li.nav-links a.active:hover {
+    width: 70px;
+    padding: 10px 14px;
+    border-radius: 5px;
+    background-color: #9eea52;
+    transform: scale(1.02);
 }
 
 a.active.reg {
@@ -347,8 +384,12 @@ th {
 }
 
 th.month {
-    width: 80px; 
+    width: 80px;
 }
+
+
+
+/* FORMS */
 
 .fieldset {
     display: flex;
@@ -356,27 +397,30 @@ th.month {
     padding: 10px 10px 10px 0;
 }
 
-.fieldset input[type="text"]{
+.fieldset input[type="text"],
+.fieldset input[type="date"],
+.fieldset select {
     flex: 1;
     display: inline-block;
 }
 
-input {
+.fieldset input {
     font-family: courier, sans-serif;
     font-size: 12px;
     margin: 0 5px;
 }
 
-input.long-box {
-    width: calc(100% - );
+.fieldset .long-box {
+    width: calc(100% -);
 }
 
-.form {
-    font-weight: 400;
-}
+
+
+
+/* MAPS */
 
 #map {
-    height: 60vh;
+    height: 300px;
 }
 
 main {
@@ -387,21 +431,46 @@ main {
     bottom: 0px;
 }
 
-div.home {
-    padding-left: 150px;
+div.content {
+    position: relative;
+    left: 180px;
+    top: 25px;
+    box-sizing: content-box;
+    padding: 0 20px;
+}
+
+.content {
+    flex: 4;
+    position: relative;
+    left: 0;
+    overflow: scroll;
+    margin-right: 200px
+    
 }
 
 h3.home {
     font-weight: 900;
     font-size: 28px;
     color: #112;
-    padding:10px 20px;
+    padding: 10px 20px;
 }
-div.news-frame {
-    padding: 30px;
+
+.news-frame {
     border-radius: 10px;
     box-shadow: 0 0 0 2pt #89d83a;
-    padding: 10px 10px;
+    margin: 10px 10px 25px 10px;
+    width: 420px;
+    overflow: hidden;
+}
+
+.news-frame p {
+    text-align: right;
+    margin-right: 25px;
+}
+
+.news-frame h3 {
+    color: white;
+    padding: 25px 0 15px 25px;
 }
 
 .flex-container {
@@ -415,23 +484,19 @@ div.news-frame {
 section {
     padding: 20px 0;
     max-width: 600px;
+    box-sizing: content-box;
 }
 
 #contact-info {
+    /*
+    position: relative;
+    right: 800;*/
     font-weight: 200;
     font-size: 22px;
 }
 
 .game-location {
     font-size: 12px;
-}
-
-.content {
-    flex: 4;
-    position: relative;
-    left: 10px;
-    padding: 30px 70px 0 140px;
-    overflow: scroll;
 }
 
 .side-image {
