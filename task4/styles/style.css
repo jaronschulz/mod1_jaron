@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:100,200,400,900');
 
 
+
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -96,6 +98,8 @@ video {
 }
 
 
+
+
 /* HTML5 display-role reset for older browsers */
 
 article,
@@ -140,9 +144,9 @@ table {
 }
 
 
+
+
 /*-------- START OF MY CSS STYLING ---------*/
-
-
 
 body {
     font-family: 'Barlow Semi Condensed', sans-serif;
@@ -153,27 +157,53 @@ body {
 
 header {
     background-color: #333;
-    position: absolute;
+    position: fixed;
     right: 0px;
     left: 0px;
     height: 70px;
 }
 
-div:not(.wallpaper) {
-    margin: 10px;
+header.shadow, header a:not(#logo-container) {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    z-index: 100;
 }
+
 
 h2 {
     font-weight: 400;
     font-size: 28px;
     margin-bottom: 10px;
+}
+
+h2.form {
+    font-weight: 400;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.rul h2 {
     margin-left: -20px;
 }
 
+.reg h2 {
+    margin: 0;
+    padding-bottom: 25px;
+}
+
+.reg h3 {
+    margin: 0;
+    padding-bottom: 25px;
+}
+
 h3 {
+    font-family: Montserrat, sans-serif;
     font-weight: 400;
     font-size: 22px;
     margin-left: -20px;
+}
+
+h3.home {
+    background: #333;
 }
 
 h4 {
@@ -184,6 +214,10 @@ h4 {
 
 h4.no-gap {
     margin: 8px 0 8px -2px;
+}
+
+.last {
+    margin-bottom: 30px;
 }
 
 h5 {
@@ -232,20 +266,21 @@ ol {
 }
 
 #fifa {
-    padding-bottom: 20px;
     color: green;
 }
 
 #logo-container {
-    height: 100%
+    position: fixed;
+    top: 10px;
+    left: 20px;
+    z-index: 200;
 }
 
 #logo {
-    -webkit-filter: contrast(180%);
-    filter: contrast(180%);
-    height: 50px;
-    padding-left: 10px;
-    padding-top: 10px;
+    -webkit-filter: contrast(180%) drop-shadow(5px 5px 5px #222);
+    filter: contrast(180%)  drop-shadow(5px 5px 5px #222);
+    z-index: 100;
+    width: 110px;
 }
 
 ul.nav-links {
@@ -256,7 +291,11 @@ ul.nav-links {
     background-color: #333;
     position: absolute;
     top: 20px;
-    left: 120px;
+    left: 165px;
+}
+
+li {
+    padding: 10px 0;
 }
 
 li.nav-links {
@@ -271,13 +310,18 @@ li.nav-links a {
     text-align: center;
     width: 70px;
     padding: 10px 14px;
+    border-radius: 5px;
+    background-color: #282828;
     text-decoration: none;
 }
+
 li.nav-links a:hover {
     width: 70px;
     padding: 10px 14px;
     border-radius: 5px;
-    background-color: #112;
+    background-color: #515151;
+    transform: scale(1.02);
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
 .nav-links {
@@ -285,10 +329,29 @@ li.nav-links a:hover {
     padding: 0 10px;
 }
 
-a.active {
+.nav-links .active{
     border-radius: 5px;
     background-color: #89d83a;
 }
+
+li.nav-links a.active:hover {
+    width: 70px;
+    padding: 10px 14px;
+    border-radius: 5px;
+    background-color: #9eea52;
+    transform: scale(1.02);
+}
+
+a.active.reg {
+    border-radius: 5px;
+    background-color: #ce1a1a;
+}
+
+a.active.cont {
+    border-radius: 5px;
+    background-color: #4076ce;
+}
+
 
 .button.reg {
     position: fixed;
@@ -300,10 +363,10 @@ a.active {
 
 .button.cont {
     position: fixed;
-    right: 110px;
+    right: 140px;
     top: 15px;
     border-radius: 5px;
-    border: 1px solid #A4FF4A;
+    border: 1px solid #2377ff;
 }
 
 table {
@@ -321,7 +384,43 @@ th {
 }
 
 th.month {
-    width: 80px; 
+    width: 80px;
+}
+
+
+
+/* FORMS */
+
+.fieldset {
+    display: flex;
+    font-size: 18px;
+    padding: 10px 10px 10px 0;
+}
+
+.fieldset input[type="text"],
+.fieldset input[type="date"],
+.fieldset select {
+    flex: 1;
+    display: inline-block;
+}
+
+.fieldset input {
+    font-family: courier, sans-serif;
+    font-size: 12px;
+    margin: 0 5px;
+}
+
+.fieldset .long-box {
+    width: calc(100% -);
+}
+
+
+
+
+/* MAPS */
+
+#map {
+    height: 300px;
 }
 
 main {
@@ -332,16 +431,66 @@ main {
     bottom: 0px;
 }
 
+div.content {
+    position: relative;
+    left: 180px;
+    top: 25px;
+    box-sizing: content-box;
+    padding: 0 20px;
+}
+
+.content {
+    flex: 4;
+    position: relative;
+    left: 0;
+    overflow: scroll;
+    margin-right: 200px
+    
+}
+
+h3.home {
+    font-weight: 900;
+    font-size: 28px;
+    color: #112;
+    padding: 10px 20px;
+}
+
+.news-frame {
+    border-radius: 10px;
+    box-shadow: 0 0 0 2pt #89d83a;
+    margin: 10px 10px 25px 10px;
+    width: 420px;
+    overflow: hidden;
+}
+
+.news-frame p {
+    text-align: right;
+    margin-right: 25px;
+}
+
+.news-frame h3 {
+    color: white;
+    padding: 25px 0 15px 25px;
+}
+
 .flex-container {
     display: flex;
+}
+
+.flex-item-1 {
+    flex: 1;
 }
 
 section {
     padding: 20px 0;
     max-width: 600px;
+    box-sizing: content-box;
 }
 
 #contact-info {
+    /*
+    position: relative;
+    right: 800;*/
     font-weight: 200;
     font-size: 22px;
 }
@@ -350,29 +499,19 @@ section {
     font-size: 12px;
 }
 
-.content {
-    flex: 1;
-    position: relative;
-    left: 10px;
-    padding: 30px 70px 0 140px;
-    overflow: scroll;
-}
-
 .side-image {
     width: 100%;
 }
 
 .text-block {
     position: relative;
-    top: 10%;
 }
 
 .wallpaper {
-    flex: 1;
+    flex: 3;
     background-size: cover;
     background-position: center center;
     padding: 0 60px 0 100px;
-
 }
 
 .wallpaper.home {
@@ -393,4 +532,8 @@ section {
 
 .wallpaper.contact {
     background-image: url("../img/contact.jpg");
+}
+
+.wallpaper.register {
+    background-image: url("../img/register.jpg");
 }
