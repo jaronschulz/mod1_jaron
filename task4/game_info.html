@@ -22,15 +22,15 @@
                 </li>
                 <li class="nav-links">
                     <a href="game_info.html" class="nav-links active ">Games</a>
-                <li class="nav-links">
-                    <a href="rules.html" class="nav-links  ">Rules </a>
-                </li>
-                <li class="nav-links">
-                    <a href="register.html" class="nav-links button reg ">Register</a>
-                </li>
-                <li class="nav-links">
-                    <a href="contact.html" class="nav-links button cont">Contact </a>
-                </li>
+                    <li class="nav-links">
+                        <a href="rules.html" class="nav-links  ">Rules </a>
+                    </li>
+                    <li class="nav-links">
+                        <a href="register.html" class="nav-links button reg ">Register</a>
+                    </li>
+                    <li class="nav-links">
+                        <a href="contact.html" class="nav-links button cont">Contact </a>
+                    </li>
             </ul>
         </nav>
     </header>
@@ -97,7 +97,7 @@
                         <td>9:30 a.m.</td>
                     </tr>
                 </table>
-                <table>
+                <table class="last">
                     <tr>
                         <th class="month">OCTOBER</th>
                         <th>Teams</th>
@@ -149,8 +149,8 @@
                         <td>1:00 p.m</td>
                     </tr>
                 </table>
+                <h4 class="h4-locaion">Game Locations:</h4>
                 <section class="flex-container">
-                    <h4 class="no-gap">Game Locations:</h4>
                     <div class="game-location location-name">
                         <p>AJ Katzenmaier Elementaryp</p>
                         <p>Greenbay Elementary</p>
@@ -168,6 +168,7 @@
                         <p>2101 N. Fremont St., Chicago, IL 60614</p>
                     </div>
                 </section>
+                <div id="map"></div>
                 <section>
                     <div>
                         <h4 class="inline no-gap">Facility Type:</h4>Outdoor
@@ -184,11 +185,11 @@
                     </div>
                 </section>
                 <section class="flex-container">
-                    <div>
+                    <div class="flex-item-1">
                         <h4 class="no-gap">Phone:</h4> (630) 690-8132
                     </div>
-                    <div>
-                        <h4 class="inline no-gap">Email:</h4><a href="mailto:michael.randall@chisoccer.org" target="_top">michael.randall@chisoccer.org</a>
+                    <div class="flex-item-1">
+                        <h4 class="no-gap">Email:</h4><a href="mailto:michael.randall@chisoccer.org" target="_top">michael.randall@chisoccer.org</a>
                     </div>
                 </section>
             </div>
@@ -197,5 +198,10 @@
             <h5>Game Schedule</h5>
         </div>
     </main>
+    <script type="text/javascript" src="script.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC33sE1HOmjTO6zhwlxpYzcBrc4TDUZUI4&callback=initMap"></script>
+    
+
+</body>
 
 </html>

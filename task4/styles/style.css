@@ -153,7 +153,7 @@ body {
 
 header {
     background-color: #333;
-    position: absolute;
+    position: fixed;
     right: 0px;
     left: 0px;
     height: 70px;
@@ -177,7 +177,7 @@ h2.form {
 }
 
 h3 {
-    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-family: /*'Barlow Semi Condensed'*/Montserrat, sans-serif;
     font-weight: 400;
     font-size: 22px;
     margin-left: -20px;
@@ -191,6 +191,10 @@ h4 {
 
 h4.no-gap {
     margin: 8px 0 8px -2px;
+}
+
+.last {
+    margin-bottom: 30px; 
 }
 
 h5 {
@@ -243,15 +247,16 @@ ol {
 }
 
 #logo-container {
-    height: 100%
+    position: fixed;
+    top: 10px;
+    left: 20px;
+    z-index: 200;
 }
 
 #logo {
     -webkit-filter: contrast(180%);
     filter: contrast(180%);
-    height: 50px;
-    padding-left: 10px;
-    padding-top: 10px;
+    width: 110px;
 }
 
 ul.nav-links {
@@ -262,7 +267,7 @@ ul.nav-links {
     background-color: #333;
     position: absolute;
     top: 20px;
-    left: 120px;
+    left: 165px;
 }
 
 li {
@@ -345,27 +350,33 @@ th.month {
     width: 80px; 
 }
 
-fieldset {
-    font-family: courier, sans-serif;
-    font-size: 12px;
+.fieldset {
+    display: flex;
+    font-size: 18px;
+    padding: 10px 10px 10px 0;
 }
 
-label:not(:first-child) {
-    padding: 15px;
+.fieldset input[type="text"]{
+    flex: 1;
+    display: inline-block;
 }
 
 input {
     font-family: courier, sans-serif;
     font-size: 12px;
+    margin: 0 5px;
 }
 
 input.long-box {
-    width: calc(100% - 131px);
+    width: calc(100% - );
 }
 
 .form {
     font-weight: 400;
-    display: inline-block;
+}
+
+#map {
+    height: 60vh;
 }
 
 main {
@@ -376,8 +387,29 @@ main {
     bottom: 0px;
 }
 
+div.home {
+    padding-left: 150px;
+}
+
+h3.home {
+    font-weight: 900;
+    font-size: 28px;
+    color: #112;
+    padding:10px 20px;
+}
+div.news-frame {
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 0 2pt #89d83a;
+    padding: 10px 10px;
+}
+
 .flex-container {
     display: flex;
+}
+
+.flex-item-1 {
+    flex: 1;
 }
 
 section {
@@ -395,7 +427,7 @@ section {
 }
 
 .content {
-    flex: 1;
+    flex: 4;
     position: relative;
     left: 10px;
     padding: 30px 70px 0 140px;
@@ -408,11 +440,10 @@ section {
 
 .text-block {
     position: relative;
-    top: 10%;
 }
 
 .wallpaper {
-    flex: 1;
+    flex: 3;
     background-size: cover;
     background-position: center center;
     padding: 0 60px 0 100px;
