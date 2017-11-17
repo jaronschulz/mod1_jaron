@@ -1,4 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
+-/* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -156,7 +156,7 @@ body {
 
 }
 
-header:not(#season-plan) {
+header {
     margin: 10 0 0 0;
     flex-direction: column
 }
@@ -165,7 +165,7 @@ header:not(#season-plan) {
     background-repeat: none;
     background-size: cover;
     background-image: url("../img/design1_image1.jpeg");
-    background-position: top -50px center;
+    background-position: top 10% center; 
     height: 250px;
 }
 
@@ -188,7 +188,8 @@ h2 {
     font-size: 25px;
 }
 
-div #titel-line {
+
+div #title-line {
     height: 41px;
 }
 
@@ -266,9 +267,9 @@ aside {
 
 main {
     padding: 25px 150px 0 0;
- /*   margin-right: 150px;*/
 }
 
-/*main#contact-info {
-    padding-top: 25px;
-}*/
+#contact-info {
+    padding-left: 40px;
+    padding-top: 90px;
+}
