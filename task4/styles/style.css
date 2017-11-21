@@ -202,10 +202,6 @@ h3 {
     margin-left: -20px;
 }
 
-h3.home {
-    background: #333;
-}
-
 h4 {
     font-weight: 400;
     display: inline-block;
@@ -311,16 +307,23 @@ li.nav-links a {
     width: 70px;
     padding: 10px 14px;
     border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color:  transparent;
     background-color: #282828;
     text-decoration: none;
 }
 
 li.nav-links a:hover {
+    transform-origin: center bottom;
+    transform: scale(1.001);
     width: 70px;
     padding: 10px 14px;
     border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color:  #89d83a;
     background-color: #515151;
-    transform: scale(1.02);
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
@@ -387,6 +390,10 @@ th.month {
     width: 80px;
 }
 
+h4.h4-location {
+    margin: -10;
+}
+
 
 
 /* FORMS */
@@ -404,18 +411,30 @@ th.month {
     display: inline-block;
 }
 
+.fieldset select {
+    font-family: courier, sans-serif;
+    font-size: 9px;
+ }
+
 .fieldset input {
     font-family: courier, sans-serif;
-    font-size: 12px;
+    font-size: 9px;
     margin: 0 5px;
 }
 
-.fieldset .long-box {
-    width: calc(100% -);
+h4.reg-head {
+    margin-left: 0;
+    padding: 10px 0; 
 }
 
+label.form-element {
+    flex: 1;
+    padding:0 5px;
+}
 
-
+div.fieldset div.fieldset {
+    padding: 0;
+}
 
 /* MAPS */
 
@@ -431,46 +450,29 @@ main {
     bottom: 0px;
 }
 
-div.content {
-    position: relative;
-    left: 180px;
-    top: 25px;
-    box-sizing: content-box;
-    padding: 0 20px;
-}
-
-.content {
-    flex: 4;
-    position: relative;
-    left: 0;
-    overflow: scroll;
-    margin-right: 200px
-    
-}
-
 h3.home {
     font-weight: 900;
     font-size: 28px;
     color: #112;
     padding: 10px 20px;
+    background: #99e54e;
+    padding-left: 20px;
+    margin: 0;
+    color: white;
+    padding: 25px 0 15px 25px;
 }
 
 .news-frame {
     border-radius: 10px;
-    box-shadow: 0 0 0 2pt #89d83a;
-    margin: 10px 10px 25px 10px;
-    width: 420px;
+    box-shadow: 0 0 0 2pt #99e54e;
+    margin: 10px 10px 25px 3px;
     overflow: hidden;
+    max-width: 445px; 
 }
 
 .news-frame p {
     text-align: right;
     margin-right: 25px;
-}
-
-.news-frame h3 {
-    color: white;
-    padding: 25px 0 15px 25px;
 }
 
 .flex-container {
@@ -481,18 +483,37 @@ h3.home {
     flex: 1;
 }
 
-section {
-    padding: 20px 0;
-    max-width: 600px;
+div.content {
+    position: relative;
+    left: 180px;
+    top: 25px;
     box-sizing: content-box;
+    max-width: 30em;
+    padding: 0 40px 0 0;
+}
+
+.content {
+    flex: 4;
+    position: relative;
+    left: 0;
+    overflow: scroll;
+    
 }
 
 #contact-info {
-    /*
-    position: relative;
-    right: 800;*/
     font-weight: 200;
     font-size: 22px;
+}
+
+/*.text-block {
+
+}*/
+
+section {
+    padding: 20px 0;
+    box-sizing: content-box;
+    min-width: 50vh;
+    max-width: 75vh;
 }
 
 .game-location {
@@ -503,15 +524,16 @@ section {
     width: 100%;
 }
 
-.text-block {
-    position: relative;
-}
-
 .wallpaper {
     flex: 3;
     background-size: cover;
     background-position: center center;
-    padding: 0 60px 0 100px;
+    position: fixed;
+    right: 0px;
+    bottom: 0;
+    top: 70px;
+    width: 30vw;
+    padding: 0 100px; 
 }
 
 .wallpaper.home {

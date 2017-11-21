@@ -21,20 +21,21 @@
                     <a href="about.html" class="nav-links ">About </a>
                 </li>
                 <li class="nav-links">
-                    <a href="game_info.html" class="nav-links  ">Games</a>
-                    <li class="nav-links">
-                        <a href="rules.html" class="nav-links  ">Rules </a>
-                    </li>
-                    <li class="nav-links">
-                        <a href="register.html" class="nav-links button reg active">Register</a>
-                    </li>
-                    <li class="nav-links">
-                        <a href="contact.html" class="nav-links button cont">Contact </a>
-                    </li>
+                <a href="game_info.html" class="nav-links  ">Games</a>
+                </li>
+                <li class="nav-links">
+                    <a href="rules.html" class="nav-links  ">Rules </a>
+                </li>
+                <li class="nav-links">
+                    <a href="register.html" class="nav-links button reg active">Register</a>
+                </li>
+                <li class="nav-links">
+                    <a href="contact.html" class="nav-links button cont">Contact </a>
+                </li>
             </ul>
         </nav>
     </header>
-    <main class="flex-container reg">
+    <main class="reg">
         <div class="content">
             <section>
                 <form action="/show_data.html" method="GET">
@@ -46,7 +47,7 @@
                     </div>
                     <div class="fieldset">
                         <label>Street Address : </label>
-                        <input class="long-box" type="text" name="StreetAddress">
+                        <input type="text" name="StreetAddress">
                     </div>
                     <div class="fieldset">
                         <label>City :</label>
@@ -72,7 +73,7 @@
                     </div>
                     <div class="fieldset">
                         <label>Parent/Guardian:</label>
-                        <input class="long-box" type="text" name="parent">
+                        <input type="text" name="parent">
                     </div>
                     <div class="fieldset">
                         <label>Contact Phone:</label>
@@ -80,102 +81,128 @@
                         <label>Contact Email:</label>
                         <input type="text" name="email">
                     </div>
-                    <h3>Which elementary schools do you live near?</h3>
+                    <h4 class="reg-head">Which elementary schools do you live near?</h4>
                     <div class="fieldset">
-                        <div class="fieldset">
-                            <h4>1st Closest School:</h4>
-                            <select name="first_closet_school">
-                                <option value="AJ Katzenmaier">AJ Katzenmaier</option>
-                                <option value="Greenbay">Greenbay</option>
-                                <option value="Howard A Yeager">Howard A Yeager</option>
-                                <option value="Marjorie P Hart">Marjorie P Hart</option>
-                                <option value="North Elementary">North Elementary</option>
-                                <option value="South Elementary">South Elementary</option>
-                            </select>
-                        </div>
-                        <div class="fieldset">
-                            <h4>2nd Closest School</h4>
-                            <label></label>
-                            <select name="second_closet_school">
-                                <option value="AJ Katzenmaier">AJ Katzenmaier</option>
-                                <option value="Greenbay">Greenbay</option>
-                                <option value="Howard A Yeager">Howard A Yeager</option>
-                                <option value="Marjorie P Hart">Marjorie P Hart</option>
-                                <option value="North Elementary">North Elementary</option>
-                                <option value="South Elementary">South Elementary</option>
-                            </select>
-                        </div>
+                        <label class="form-element">
+                            Closest School:
+                        </label>
+                        <select name="first_closet_school">
+                            <option disabled selected value> -- select an option -- </option>
+                            <option value="AJ Katzenmaier">AJ Katzenmaier</option>
+                            <option value="Greenbay">Greenbay</option>
+                            <option value="Howard A Yeager">Howard A Yeager</option>
+                            <option value="Marjorie P Hart">Marjorie P Hart</option>
+                            <option value="North Elementary">North Elementary</option>
+                            <option value="South Elementary">South Elementary</option>
+                        </select>
+                        <label class="form-element">
+                            2nd Closest School:
+                        </label>
+                        <select name="second_closet_school">
+                            <option disabled selected value> -- select an option -- </option>
+                            <option value="AJ Katzenmaier">AJ Katzenmaier</option>
+                            <option value="Greenbay">Greenbay</option>
+                            <option value="Howard A Yeager">Howard A Yeager</option>
+                            <option value="Marjorie P Hart">Marjorie P Hart</option>
+                            <option value="North Elementary">North Elementary</option>
+                            <option value="South Elementary">South Elementary</option>
+                        </select>
                     </div>
                     <div>
-                        <h4>What position(s) do you normally play?</h4>
-                        <p>(check all that apply)</p>
-                        <fieldset class="form">
+                        <h4 class="reg-head">
+                            What position(s) do you normally play? (check all that apply)
+                        </h4>
+                        <div class="fieldset form">
                             <input type="checkbox" name="position" value="Forward"> Forward
                             <input type="checkbox" name="position" value="Defense"> Defense
                             <input type="checkbox" name="position" value="Midfield"> Midfield
                             <input type="checkbox" name="position" value="Goalkeeper"> Goalkeeper
-                        </fieldset>
+                        </div>
                     </div>
                     <div>
-                        <h4>What position(s) do you want to play? </h4>
-                        <p>(check all that apply)</p>
-                        <fieldset class="form">
+                        <h4 class="reg-head">
+                            What position(s) do you want to play? (check all that apply) 
+                        </h4>
+                        <div class="fieldset form">
                             <input type="checkbox" name="position" value="Forward"> Forward
                             <input type="checkbox" name="position" value="Defense"> Defense
                             <input type="checkbox" name="position" value="Midfield"> Midfield
                             <input type="checkbox" name="position" value="Goalkeeper"> Goalkeeper
-                        </fieldset>
+                        </div>
                     </div>
                     <div class="fieldset">
                         <input type="checkbox" name="uniform" value="true">
-                        <h4>Already Have a Uniform</h4>
+                        <h4 class="reg-head">Already Have a Uniform</h4>
                     </div>
                     <div class="fieldset">
-                        <h4>Jersey Size:</h4>
-                        <div class="fieldset">
-                            <select>
-                                <!-- All the  <options> tags need to be closed. That's also where the weird indentation comes from-->
-                                <option type="checkbox" name="jersey_size" value="ys"> Youth Small
-                                <option type="checkbox" name="jersey_size" value="ym"> Youth Medium
-                                <option type="checkbox" name="jersey_size" value="yl"> Youth Large
-                                <option type="checkbox" name="jersey_size" value="s"> Small
-                                <option type="checkbox" name="jersey_size" value="m"> Medium
-                                <option type="checkbox" name="jersey_size" value="l"> Large
-                                <option type="checkbox" name="jersey_size" value="xl"> Extra Large
-                            </select>
-                        </div>
+                        <label class="form-element">Jersey Size:</label>
+                        <select name="jersey_size">
+                            <option disabled selected value>
+                                -- select an option -- 
+                            </option>
+                            <option type="checkbox" name="jersey_size" value="ys"> 
+                                Youth Small
+                            </option>
+                            <option type="checkbox" name="jersey_size" value="ym"> 
+                                Youth Medium
+                            </option>
+                            <option type="checkbox" name="jersey_size" value="yl"> 
+                                Youth Large
+                            </option>
+                            <option type="checkbox" name="jersey_size" value="s"> 
+                                Small
+                            </option>
+                            <option type="checkbox" name="jersey_size" value="m"> 
+                                Medium
+                            </option>
+                            <option type="checkbox" name="jersey_size" value="l"> 
+                                Large
+                            </option>
+                            <option type="checkbox" name="jersey_size" value="xl"> 
+                                Extra Large
+                            </option>
+                        </select>
+                        <label class="form-element">Shorts Size:</label>
+                        <select>
+                            <option disabled selected value> -- select an option -- </option>
+                            <option type="checkbox" name="jersey_size" value="ys"> 
+                                Youth Small
+                            </option>
+                            <option type="checkbox" name="jersey_size" value="ym"> 
+                                Youth Medium
+                            </option>
+                            <option type="checkbox" name="jersey_size" value="yl"> 
+                                Youth Large
+                            </option>
+                            <option type="checkbox" name="jersey_size" value="s"> 
+                                Small
+                            </option>
+                            <option type="checkbox" name="jersey_size" value="m"> 
+                                Medium
+                            </option>
+                            <option type="checkbox" name="jersey_size" value="l"> 
+                                Large
+                            </option>
+                            <option type="checkbox" name="jersey_size" value="xl"> 
+                                Extra Large
+                            </option>
+                        </select>
                     </div>
-                    <div>
-                        <h4>Shorts Size:</h4>
-                        <div class="fieldset">
-                            <select>
-                                <!-- see above -->
-                                <option type="checkbox" name="jersey_size" value="ys"> Youth Small
-                                <option type="checkbox" name="jersey_size" value="ym"> Youth Medium
-                                <option type="checkbox" name="jersey_size" value="yl"> Youth Large
-                                <option type="checkbox" name="jersey_size" value="s"> Small
-                                <option type="checkbox" name="jersey_size" value="m"> Medium
-                                <option type="checkbox" name="jersey_size" value="l"> Large
-                                <option type="checkbox" name="jersey_size" value="xl"> Extra Large
-                            </select>
-                        </div>
-                    </div>
-                    <h4>Permission to Play</h4>
+                    <h4 class="reg-head">Permission to Play</h4>
                     <p>I, the parent or guardian of the minor registrant, agree that the registrant and I will abide by all the rules of the Northside Youth Soccer League (NYSL). In recognizing the possibility of physical injury associated with soccer and in consideration for the “League” accepting the registrant for its soccer programs and activities, I hereby release, discharge, and/or otherwise indemnify NYSL, their employees and associated personnel and volunteers, including the facilities used for practices and games, against any claim by or on behalf of the registrant as a result of the registrant’s participation in the program and/or being transported to or from NYSL sponsored activities, which transportation.
                     </p>
-                    <p>By signing below, I hereby agree and authorize the above. In addition, by signing below, I also acknowledge that I have read the cancellation policy and agree to its terms.
+                    <p>By entering your name below, I hereby agree and authorize the above. In addition, by signing below, I also acknowledge that I have read the cancellation policy and agree to its terms.
                     </p>
-                    <div class="fieldset">
-                        <label>
-                            Parent/Guardian <h4>Signature:</h4>
-                        </label>
+                    <div>
+                        <p>Parent/Guardian </p>
+                        <h4 class="reg-head">Signature:</h4>
                         <input type="text" name="phone">
                         <label>
                             <h4>Contact Email:</h4>
                         </label>
-                        <input type="text" name="email">
-                        
+                        <input type="text" name="email"> 
                     </div>
+                    <input type=button onClick="parent.open('show_data.html')" value='Submit' >
                 </form>
             </section>
         </div>
