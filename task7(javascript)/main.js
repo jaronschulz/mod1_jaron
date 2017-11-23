@@ -39,3 +39,42 @@ for (var i = 0; i <classMaids.length; i++) {
 };
 
 // Part 5
+
+console.log('WHILE-VERSION:')
+
+var studentAges = [27,32,21,40,30,29,30,33,30,28,31,32,28,21];
+var i = 0;
+
+while (i < studentAges.length) {
+	for (var i = 0; i < studentAges.length; i++) {
+		if (studentAges[i] % 2 == 0) {
+			console.log( studentAges[i] );
+		} else {}
+	
+}
+};
+
+
+console.log('IF-VERSION:')
+
+
+for (var i = 0; i < studentAges.length; i++) {
+	if (studentAges[i] % 2 == 0) {
+			console.log( studentAges[i] );
+		} else {}
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
