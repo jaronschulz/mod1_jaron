@@ -1,1 +1,2 @@
-console.log("Starting javascript...")
+
+console.log('Starting javascript...')
