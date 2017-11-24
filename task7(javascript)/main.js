@@ -108,7 +108,7 @@ function printDuplicates(arr) {
 var myColors = ["Red", "Green", "White", "Black"];
 
 
-function joinArray (arr, delimiter) {
+function joinArray(arr, delimiter) {
 	var txt = 'Simple Array Content: ';
 	console.log( txt.bold() + '  ' + arr.join());
 	console.log(arr.join(delimiter))
@@ -122,9 +122,30 @@ joinArray(myColors, '  ############ ');
 
 // Part 8
 
+// function reverseNumber(number) {
+// 	if (Number.isInteger(number) == true ) {
+
+// 		return []
+
+// 	} else {
+// 		return ["Input is not a number"]
+// 	}
+// }
+
+// console.log(reverseNumber)
 
 
+// Part 10
 
+function longestWord (str){
+	var arr = str.split(" ");
+	arr.sort(function (a,b) { return b.length-a.length;
+	})
+	console.log(arr[0]);
+
+}
+
+longestWord('Web Development Tutorial')
 
 
 
