@@ -109,16 +109,20 @@ var myColors = ["Red", "Green", "White", "Black"];
 
 
 function joinArray (arr, delimiter) {
-	var numberPlusDelimiter = arr.join(delimiter);
-	// return numberPlusDelimiter;
-	console.log(numberPlusDelimiter)
+	var txt = 'Simple Array Content: ';
+	console.log( txt.bold() + '  ' + arr.join());
+	console.log(arr.join(delimiter))
 }
 
 joinArray(myColors, ' // ');
 
-joinArray(myColors, ', ');
+joinArray(myColors, ',- ');
 
 joinArray(myColors, '  ############ ');
+
+// Part 8
+
+
 
 
 
