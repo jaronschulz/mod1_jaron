@@ -43,15 +43,12 @@ for (var i = 0; i <classMaids.length; i++) {
 console.log('WHILE-VERSION:')
 
 var studentAges = [27,32,21,40,30,29,30,33,30,28,31,32,28,21];
+
 var i = 0;
 
 while (i < studentAges.length) {
-	for (var i = 0; i < studentAges.length; i++) {
-		if (studentAges[i] % 2 == 0) {
-			console.log( studentAges[i] );
-		} else {}
-	
-}
+	console.log(studentAges[i]);
+	i++;
 };
 
 
@@ -64,11 +61,47 @@ for (var i = 0; i < studentAges.length; i++) {
 		} else {}
 };
 
+//  Part 6
 
 
+var exampleArray = [3,6,67,6,23,11,100,8,93,0,17,24,7,1,33,45,28,33,23,12,99,100]
+
+console.log('MIN')
+minNumber(exampleArray);
+console.log('MAX')
+maxNumber(exampleArray);
+console.log('INDEX')
+printIndex(exampleArray, 0);
+console.log('REPEAT'),
+printDuplicates(exampleArray);
 
 
+function minNumber(arr) {
+  console.log(Math.min.apply(null, arr));
+};
 
+function maxNumber(arr) {
+  console.log(Math.max.apply(null, arr));
+};
+
+function printIndex(arr, index) {
+	console.log(arr[index])
+};
+
+
+function printDuplicates(arr) {
+	var duplicates = [];
+	arr.forEach(function(element, index) {
+		if (arr.indexOf(element, index + 1) > -1) {
+			if (duplicates.indexOf(element) == -1) {
+				duplicates.push(element);
+			}
+		}
+	})
+	
+	console.log(duplicates);
+
+};
 
 
 
