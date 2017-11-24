@@ -103,8 +103,22 @@ function printDuplicates(arr) {
 
 };
 
+//  Part 7
+
+var myColors = ["Red", "Green", "White", "Black"];
 
 
+function joinArray (arr, delimiter) {
+	var numberPlusDelimiter = arr.join(delimiter);
+	// return numberPlusDelimiter;
+	console.log(numberPlusDelimiter)
+}
+
+joinArray(myColors, ' // ');
+
+joinArray(myColors, ', ');
+
+joinArray(myColors, '  ############ ');
 
 
 
