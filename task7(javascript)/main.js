@@ -150,16 +150,21 @@ reverseNumber(2136)
 
 // PArt 9
 
+console.log('###################- PART 9 -###################')
 
+function reverseLetters (input) {
+	if (typeof input === 'string' || input instanceof String) {
+		var inputString = input.split("").sort().join("");
+      	console.log(inputString)
+        
+    } else {
+    	console.log("\"" + input + '\"' + " is not a string")
+       	
+    } 
+}
 
-
-
-
-
-
-
-
-
+reverseLetters('bananabread')
+reverseLetters(109876)
 
 // Part 10
 console.log('###################- PART 10 -###################')
